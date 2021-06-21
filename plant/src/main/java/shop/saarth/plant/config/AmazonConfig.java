@@ -17,8 +17,8 @@ public class AmazonConfig {
 
     @Bean
     public AmazonS3 s3() {
-        AWSCredentials awsCredentials = new BasicAWSCredentials("AKIAVMBMXOKOH5MC6NMI",
-                "1igJgY/hH8juLZ8Y6LoxXYe7pJmxS+oB3u6EOFfY");
+        AWSCredentials awsCredentials = new BasicAWSCredentials("",
+                "");
 
         return AmazonS3ClientBuilder.standard().withRegion(region)
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials)).build();
@@ -26,8 +26,8 @@ public class AmazonConfig {
 
     @Bean
     public AmazonSNS sns() {
-        AWSCredentials awsCredentials = new BasicAWSCredentials("AKIAVMBMXOKOH5MC6NMI",
-                "1igJgY/hH8juLZ8Y6LoxXYe7pJmxS+oB3u6EOFfY");
+        AWSCredentials awsCredentials = new BasicAWSCredentials("",
+                "");
 
         return AmazonSNSClientBuilder.standard().withRegion(region)
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials)).build();
