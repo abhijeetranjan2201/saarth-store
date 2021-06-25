@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface BasketRepository extends JpaRepository<Basket, Integer> {
-
-    public List<Basket> findByUser(User user);
+    
 }
