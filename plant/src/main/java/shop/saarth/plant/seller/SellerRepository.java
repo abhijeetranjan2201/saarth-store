@@ -7,5 +7,5 @@ import java.util.UUID;
 
 @Repository
 public interface SellerRepository extends JpaRepository<SellerDetails, UUID> {
-
+  SellerDetails findBySellerShopName(String store);
 }
