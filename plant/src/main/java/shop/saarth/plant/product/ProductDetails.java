@@ -23,6 +23,9 @@ public class ProductDetails {
     private float maxPrice;
     private float price;
     private boolean stock;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "sellerId", referencedColumnName = "sellerId")
+    private SellerDetails sellerDetails;
 
     public ProductDetails(){
     }
@@ -98,6 +101,9 @@ public class ProductDetails {
 
     public boolean getStock() { return stock; }
     public void setStock(boolean stock) { this.stock = stock; }
+    
+    public SellerDetails getSellerDetails() { return  sellerDetails; }
+    public void setSellerDetails(SellerDetails sellerDetails) { this.sellerDetails = sellerDetails; }
 
     @Override
     public String toString() {
