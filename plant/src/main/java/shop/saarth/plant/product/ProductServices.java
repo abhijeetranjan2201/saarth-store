@@ -58,6 +58,8 @@ public class ProductServices {
     //post request for product method
     public void addNewProduct(ProductDetails productDetails) {
         productRepository.save(productDetails);
+        String store = productDetails.getStoreName();
+        productDetails.setSellerDetails(sellerRepository.findBySellerShopName(store));
     }
 
     @Transactional//put request for product to update image field method
