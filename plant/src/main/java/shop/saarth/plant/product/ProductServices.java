@@ -16,11 +16,13 @@ public class ProductServices {
 
     private final ProductRepository productRepository;
     private final FileStore fileStore;
+    private final SellerRepository sellerRepository;
 
     @Autowired
-    public ProductServices(ProductRepository productRepository, FileStore fileStore) {
+    public ProductServices(ProductRepository productRepository, FileStore fileStore, SellerRepository sellerRepository) {
         this.productRepository = productRepository;
         this.fileStore = fileStore;
+        this.sellerRepository = sellerRepository;
     }
 
     //get request for product method
