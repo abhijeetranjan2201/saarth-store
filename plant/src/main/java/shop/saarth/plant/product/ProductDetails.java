@@ -23,8 +23,7 @@ public class ProductDetails {
     private float maxPrice;
     private float price;
     private boolean stock;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "sellerId", referencedColumnName = "sellerId")
+    @ManyToOne
     private SellerDetails sellerDetails;
 
     public ProductDetails(){
