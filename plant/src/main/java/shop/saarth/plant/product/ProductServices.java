@@ -57,7 +57,7 @@ public class ProductServices {
         productDetails.setStock(stock);
     }
 
-    //post request for product method
+    @Transactional//post request for product method
     public void addNewProduct(ProductDetails productDetails) {
         productRepository.save(productDetails);
         String store = productDetails.getStoreName();
