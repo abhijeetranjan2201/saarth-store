@@ -66,7 +66,7 @@ public class UserService {
                 .orElseThrow(() -> new IllegalStateException("User does not exist"));
         client.setOtp(pass);
     }
-
+    
     @ResponseBody
     @Transactional
     public void login(String username) {
