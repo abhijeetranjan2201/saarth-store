@@ -90,7 +90,7 @@ public class UserService {
         User user = userRepository.findByUserName(username);
         user.setOtp(pass);
         message.sendSMSMessage( otp, "+91 " + username, smsAttributes);
-    }
+    }    
 
     public String generateToken(AuthRequest authRequest) throws Exception {
         try {
